@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const items = require('./routes/items');
-const products = require('./routes/products'); 
+const products = require('./routes/products'); // Asegúrate de que esta línea exista si tienes productos
 
 const app = express();
 
@@ -18,11 +18,11 @@ mongoose.connect('mongodb://localhost:27017/crud-app', {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Rutas
 app.use('/api/items', items);
-app.use('/api/products', products); 
+app.use('/api/products', products); // Asegúrate de que esta línea exista si tienes productos
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

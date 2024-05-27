@@ -8,9 +8,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">CRUD App</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Productos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="container mt-5">
     <h1 class="text-center mb-4">Ingreso de Productos</h1>
     <form id="productForm" class="mb-4">
+      <input type="hidden" id="productId">
       <div class="form-group">
         <label for="productName">Nombre del Producto</label>
         <input type="text" id="productName" class="form-control" placeholder="Nombre del Producto" required>
@@ -25,9 +39,9 @@
       </div>
       <div class="form-group">
         <label for="productFile">Archivo</label>
-        <input type="file" id="productFile" class="form-control-file" required>
+        <input type="file" id="productFile" class="form-control-file">
       </div>
-      <button type="submit" class="btn btn-primary">Agregar Producto</button>
+      <button type="submit" class="btn btn-primary">Guardar Producto</button>
     </form>
     <div id="productList" class="row"></div>
   </div>
