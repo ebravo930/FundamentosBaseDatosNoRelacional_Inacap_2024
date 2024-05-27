@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  #itemForm {
+    margin: 30px 0;
+  }
+  
+  #itemForm input, #itemForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  #itemsList {
+    margin: 20px 0;
+  }
+  
+  .item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
