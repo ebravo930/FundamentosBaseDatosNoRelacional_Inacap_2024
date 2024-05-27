@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App</title>
+  <title>Personas</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,7 @@
           <a class="nav-link" href="product.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="person.html">Persona</a>
+          <a class="nav-link" href="person.html">Personas</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" id="searchForm">
@@ -29,25 +29,25 @@
     </div>
   </nav>
   <div class="container mt-5">
-    <h1 class="text-center mb-4">CRUD App</h1>
-    <form id="itemForm" class="mb-4">
-      <input type="hidden" id="itemId">
+    <h1 class="text-center mb-4">Agregar Persona</h1>
+    <form id="personForm" class="mb-4">
+      <input type="hidden" id="personId">
       <div class="form-group">
         <label for="name">Nombre</label>
         <input type="text" id="name" class="form-control" placeholder="Nombre" required>
       </div>
       <div class="form-group">
-        <label for="description">Descripción</label>
-        <textarea id="description" class="form-control" placeholder="Descripción" required></textarea>
+        <label for="age">Edad</label>
+        <input type="number" id="age" class="form-control" placeholder="Edad" required>
       </div>
       <div class="form-group">
-        <label for="file">Archivo</label>
-        <input type="file" id="file" class="form-control-file">
+        <label for="photo">Foto</label>
+        <input type="file" id="photo" class="form-control-file" required>
       </div>
-      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="submit" class="btn btn-primary">Guardar Persona</button>
     </form>
-    <div id="itemsList" class="row"></div>
+    <div id="personList" class="row"></div>
   </div>
-  <script src="app.js"></script>
+  <script src="person.js"></script>
 </body>
 </html>

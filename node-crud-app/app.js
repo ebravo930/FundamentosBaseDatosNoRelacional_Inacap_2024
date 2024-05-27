@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const items = require('./routes/items');
-const products = require('./routes/products'); // Asegúrate de que esta línea exista si tienes productos
+const products = require('./routes/products'); 
+const persons = require('./routes/persons');
 
 const app = express();
 
@@ -22,7 +23,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Rutas
 app.use('/api/items', items);
-app.use('/api/products', products); // Asegúrate de que esta línea exista si tienes productos
+app.use('/api/products', products);
+app.use('/api/persons', persons);
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
