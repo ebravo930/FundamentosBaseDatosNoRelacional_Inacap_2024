@@ -2,6 +2,11 @@
 
 ## Docker
 
+### Descripción
+Docker se utiliza para crear contenedores livianos y portátiles para tus aplicaciones. En este proyecto, Docker se utiliza para ejecutar una instancia de MongoDB, lo que facilita la configuración y el despliegue de la base de datos sin preocuparse por las dependencias del sistema.
+
+### Pasos
+
 1. **Descargar imagen MongoDB:**
 
     ```bash
@@ -15,6 +20,11 @@
     ```
 
 ## Node.js
+
+### Descripción
+Node.js es un entorno de ejecución para JavaScript que te permite construir aplicaciones del lado del servidor. En este proyecto, se utiliza Node.js junto con Express para crear un servidor que maneja operaciones CRUD (Crear, Leer, Actualizar, Eliminar) con archivos y MongoDB como base de datos.
+
+### Pasos
 
 1. **Crear la carpeta del proyecto:**
 
@@ -58,33 +68,3 @@
     ```bash
     node app.js
     ```
-
-## Estructura de los Archivos
-
-### `models/item.js`
-
-```javascript
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-// Esquema del item
-const ItemSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  file: {
-    type: String,
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
-
-module.exports = mongoose.model('Item', ItemSchema);
